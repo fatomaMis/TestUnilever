@@ -4,14 +4,14 @@ describe('B2B Sell More', function () {
         browser.sleep(5000);
       };
     
-      beforeEach(function () {
-        browser.waitForAngularEnabled(false);
-        browser.get('http://152.109.212.24:9090/B2B-FE/#/?page=0&pageSize=12');
-        element(by.className('country-select')).click();
-        sleep();
-        element(by.className('flag flag-lb')).click();
-        sleep();
-      }); 
+    beforeEach(function () {
+    browser.waitForAngularEnabled(false);
+    browser.get('http://152.109.212.24:9090/B2B-FE/#/?page=0&pageSize=12');
+    element(by.className('country-select')).click();
+    sleep();
+    element(by.className('flag flag-lb')).click();
+    sleep();
+    }); 
 
     it('Test Case:Sell More', function () {
         //category item in the upper menu (بيع اكثر)
@@ -38,7 +38,5 @@ describe('B2B Sell More', function () {
         //check on text in article
         var text = element(by.className('WordSection1')).element(by.tagName('p')).getText();
         expect(text).toContain('ليبتون هي العلامة التجارية الشاي الأكثر مبيعا في العالم ، وقد تم تأسيسها لأكثر من 100 عام ومتاحة في أكثر من 150 دولة.');
-
-
     });
 });

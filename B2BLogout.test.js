@@ -22,12 +22,12 @@ describe('B2B User Logout', function () {
 
         //check Goodbye user name message
         var validationMsg = element(by.className('toast-container')).getText();
-        expect(validationMsg).toContain('!HTS- Alexandria_test Alexandria وداعا');
+        expect(validationMsg).toContain('!Grocery- Alexandria_test Alexandria وداعا');
         
 
         //check User name does not appear
         var validationName = element(by.className('header__user-actions no-margin')).getText();
-        expect(validationName).not.toContain('Hts- Alexandria_test Alexandria');
+        expect(validationName).not.toContain('Grocery- Alexandria_test Alexandria');
 
         //Log In link appears
         var validationName = element(by.className('header__user-actions no-margin')).getText();

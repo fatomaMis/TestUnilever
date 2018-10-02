@@ -1,7 +1,7 @@
 exports.config = {
     directConnect: true,
      seleniumAddress: 'http://152.109.212.24:9090/B2B-FE/',
-     specs: ['B2BChangeLanguage.test.js'],
+     specs: ['B2BLogout.test.js'],
    allScriptsTimeout: 110000,
    getPageTimeout: 100000,
    jasmineNodeOpts: {
