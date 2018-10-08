@@ -20,9 +20,7 @@ describe('B2B Search Product', function () {
          //check1 , search on number of returned items = 2
          var items = element.all(by.className('item-product_thumbnail'));
          expect(items.count()).toEqual(2);         
-         sleep();
-    
-    
+
     });
 
 

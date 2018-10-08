@@ -27,7 +27,6 @@ describe('B2B Change country', function () {
         // check name of returened sku is (Brooke Bond Red Label Black Tea Loose 5Kg)
         var prodName = element(by.className('row-product')).getText();
         expect(prodName).toContain('Brooke Bond Red Label Black Tea Loose 5Kg');
-        sleep();
 
     });
 });

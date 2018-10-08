@@ -41,8 +41,6 @@ describe('B2B Decrease quantity', function () {
         //check Value of quantity box equals 3
        var num =  element(by.className('ui-spinner-input')).getAttribute('value');
         expect(num).toEqual('2');
-        sleep();
-    
     });
 
 

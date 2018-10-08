@@ -22,9 +22,9 @@ describe('B2B change password', function () {
         sleep();
 
         //change old password by new password
-        element(by.id('oldPassword')).sendKeys('123123');
-        element(by.css('input[name=newPassword]')).sendKeys('123456');
-        element(by.css('input[name=confirmedPassword]')).sendKeys('123456');
+        element(by.id('oldPassword')).sendKeys('123456');
+        element(by.css('input[name=newPassword]')).sendKeys('123123');
+        element(by.css('input[name=confirmedPassword]')).sendKeys('123123');
         element(by.className('btn mat-button btn-primary btn-auth')).click();
         sleep();
 
@@ -32,7 +32,6 @@ describe('B2B change password', function () {
         element(by.className('toast-container')).element(by.tagName('div'));
         var validationMsg = element(by.className('toast-container')).element(by.tagName('div')).getText();
         expect(validationMsg).toMatch(/(Success!|Password Changed successfully!)/);
-        sleep();
 
         //logout
         element(by.className('header__user-actions no-margin')).element(by.tagName('a')).click();
@@ -49,14 +48,14 @@ describe('B2B change password', function () {
 
         //login with new password
         element(by.id('username')).sendKeys('cust1');
-        element(by.name('password')).sendKeys('123456');
+        element(by.name('password')).sendKeys('123123');
         element(by.className('btn mat-button btn-primary btn-auth')).click();
         sleep();
 
         //Name in successful message
         element(by.className('toast-container')).element(by.tagName('div'));
         var validationMsg = element(by.className('toast-container')).element(by.tagName('div')).getText();
-        expect(validationMsg).toContain('!HTS- Alexandria_test Alexandria أهلا');
+        expect(validationMsg).toContain('!Grocery- Alexandria_test Alexandria أهلا');
         sleep();
 
          //logout
@@ -74,7 +73,7 @@ describe('B2B change password', function () {
 
         //login with old password
         element(by.id('username')).sendKeys('cust1');
-        element(by.name('password')).sendKeys('123123');
+        element(by.name('password')).sendKeys('123456');
         element(by.className('btn mat-button btn-primary btn-auth')).click();
         sleep();
 
@@ -82,7 +81,6 @@ describe('B2B change password', function () {
         element(by.className('toast-container')).element(by.tagName('div'));
         var validationMsg = element(by.className('toast-container')).element(by.tagName('div')).getText();
         expect(validationMsg).toMatch(/(Error!| كلمه مرور غير صحيحة !)/);
-        sleep();
 
     });
 

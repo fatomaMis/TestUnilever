@@ -38,7 +38,6 @@ describe('B2B Order Success', function () {
         //Successful message appears after “order created successfully”.
         var successMsg = element(by.className('toast-message ng-star-inserted')).getText();
         expect(successMsg).toContain('تم تأكيد الطلب بنجاح');
-        sleep();
 
       });
 

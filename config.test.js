@@ -1,10 +1,10 @@
 exports.config = {
     directConnect: true,
-     seleniumAddress: 'http://152.109.212.24:9090/B2B-FE/',
-     specs: ['B2BLogout.test.js'],
-   allScriptsTimeout: 110000,
-   getPageTimeout: 100000,
-   jasmineNodeOpts: {
+    seleniumAddress: 'http://152.109.212.24:9090/B2B-FE/',
+    specs: ['B2BPromotionHome3.test.js'],
+    allScriptsTimeout: 110000,
+    getPageTimeout: 100000,
+    jasmineNodeOpts: {
        defaultTimeoutInterval: 900000
     },
     restartBrowserBetweenTests: false
@@ -46,3 +46,9 @@ exports.config = {
 //B2BTerms-Conditions.test
 //B2BChangeCountry.test
 //B2BChangeLanguage.test
+
+//B2BKeepLang.test
+//B2BSKU-Translation.test
+//B2BPromotionHome.test
+//B2BPromotionHome2.test
+//B2BPromotionHome3.test

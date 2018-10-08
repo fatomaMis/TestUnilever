@@ -20,7 +20,6 @@ describe('B2B Add To Card', function () {
         //check2 , name of returned item = name you typed in search  
         var prodName = element(by.className('product_title')).getText();
         expect(prodName).toContain('شاى ليبتون نكهات');
-        sleep();
 
         //put quantity of item + button
         element.all(by.css('.mat-button')).then(function(options){
@@ -31,7 +30,6 @@ describe('B2B Add To Card', function () {
         //validation Msg
         var msg = element(by.className('item-product_options')).element(by.tagName('p')).getText();
         expect(msg).toContain('اقل كميه 10 قطعه');
-        sleep();
 
         //put 10 items 
         element(by.css('.ui-spinner-input')).sendKeys(protractor.Key.BACK_SPACE);
@@ -48,7 +46,6 @@ describe('B2B Add To Card', function () {
         //Successful message appears after “Add to cart”.
         var successMsg = element(by.className('toast-message ng-star-inserted')).getText();
         expect(successMsg).toContain('تمت إضافة الصنف/الاصناف إلى سلة التسوق بنجاح');
-        sleep();
       });
 
     });

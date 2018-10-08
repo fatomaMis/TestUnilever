@@ -16,7 +16,7 @@ describe('B2B Side Menu Search Product', function () {
 
     it('Test Case(4):search with 2 checkbox', function () {
         element.all(by.className('mat-checkbox-layout')).then(function(op){
-            op[0].click();
+            op[1].click();
         });
         sleep();
 
@@ -26,7 +26,6 @@ describe('B2B Side Menu Search Product', function () {
         //check1 , search on number of returned items = 8
         var items = element.all(by.className('item-product_thumbnail'));
         expect(items.count()).toEqual(8);         
-        sleep();
     });
 
 

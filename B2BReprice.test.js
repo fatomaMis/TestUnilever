@@ -17,7 +17,7 @@ describe('B2B Reprice', function () {
         var price1 = sku1[3].element(by.tagName('strong')).getText();
         expect(price1).toContain('45.00 EGP');
 
-        var price2 = sku1[3].element(by.tagName('del')).getText();
+      var price2 = sku1[3].element(by.tagName('del')).getText();
         expect(price2).toContain('100.00 EGP');
 
       //change quantity to 10

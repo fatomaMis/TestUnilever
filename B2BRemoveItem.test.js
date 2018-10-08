@@ -55,7 +55,6 @@ describe('B2B Remove Item', function () {
         //check on msg of removing
         var successMsg = element(by.className('toast-message ng-star-inserted')).getText();
         expect(successMsg).toContain('تمت مسح الصنف بنجاح.');
-        sleep();
 
 
         //check on number of remaning skus (1)
@@ -66,7 +65,6 @@ describe('B2B Remove Item', function () {
          //check on name of remaning skus (Whitening Cream Gold2)
          var itemName = element(by.className('margin-bottom30')).element(by.tagName('tbody')).all(by.tagName('td'));
         expect(itemName.getText()).toContain('Whitening Cream Gold2');            
-         sleep();
 
         browser.get('http://152.109.212.24:9090/B2B-FE/#/?page=0&pageSize=12');
         
@@ -83,7 +81,6 @@ describe('B2B Remove Item', function () {
          //check on name of remaning skus (Whitening Cream Gold2)
          var itemName = element(by.className('margin-bottom30')).element(by.tagName('tbody')).all(by.tagName('td'));
         expect(itemName.getText()).toContain('Whitening Cream Gold2');            
-         sleep();
 
     });
   });

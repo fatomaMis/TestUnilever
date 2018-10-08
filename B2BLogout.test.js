@@ -12,13 +12,13 @@ describe('B2B User Logout', function () {
     });
 
     it('Test Case:Logout', function () {
-        //logout
-        element(by.className('header__user-actions no-margin')).element(by.tagName('a')).click();
+    //logout
+    element(by.className('header__user-actions no-margin')).element(by.tagName('a')).click();
+    sleep();
+    element.all(by.className('collection-item')).then(function(op){
+        op[3].click();
         sleep();
-        element.all(by.className('collection-item')).then(function(op){
-            op[3].click();
-            sleep();
-        });
+    });
 
         //check Goodbye user name message
         var validationMsg = element(by.className('toast-container')).getText();
@@ -32,14 +32,12 @@ describe('B2B User Logout', function () {
         //Log In link appears
         var validationName = element(by.className('header__user-actions no-margin')).getText();
         expect(validationName).toContain('تسجيل الدخول');
-        sleep();
 
         //Get any item and check existing of message تسجيل الدخول لإظهار الأسعار
         element(by.className('item-product')).click();
         sleep();
         var text = element(by.className('col-lg-12')).getText();
         expect(text).toContain('تسجيل الدخول لإظهار الأسعار');
-        sleep();
 
         //close window of sku
         element(by.className('close-icon')).click();
@@ -50,8 +48,6 @@ describe('B2B User Logout', function () {
         sleep();
         var text2 = element(by.tagName('p')).getText();
         expect(text2).toContain('يرجي تسجيل الدخول لمشاهدة سله المشتريات.');
-        sleep();
-
 
     });
 

@@ -30,7 +30,6 @@ describe('B2B Increase quantity', function () {
         //check Value of quantity box equals 2
         var num =  element(by.className('ui-spinner-input')).getAttribute('value');
          expect(num).toEqual('2');
-         sleep();
         });
     });
       

@@ -25,7 +25,6 @@ describe('B2B Conversion from PCs to Cs', function () {
         //check if price = 500 EGP
         var price = element(by.className('price-summary')).element(by.tagName('strong')).getText();
         expect(price).toContain('500.00 EGP');
-        sleep();
 
         //select radio button of Cs
         element.all(by.className('mat-radio-outer-circle')).then(function(option){
@@ -36,9 +35,7 @@ describe('B2B Conversion from PCs to Cs', function () {
         //check if price = 1000 EGP
         var price = element(by.className('price-summary')).element(by.tagName('strong')).getText();
         expect(price).toContain('1,000.00 EGP');
-        sleep();
-
-
+        
        });
 
     });

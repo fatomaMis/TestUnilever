@@ -50,12 +50,10 @@ describe('B2B Terms and Conditions', function () {
         //check on text in article
         var text = element(by.className('WordSection1')).element(by.tagName('span')).getText();
         expect(text).toContain('Legal');
-        sleep();
 
         element.all(by.tagName('p')).then(function(statment){
            var text1 =  statment[1].getText();
             expect(text1).toContain('PLEASE READ THIS NOTICE CAREFULLY BEFORE USING THE SITE. IT REGULATES YOUR USE OF THE SITE AND ALL MATERIAL WITHIN IT.');
-            sleep();
         });
     });
 });
